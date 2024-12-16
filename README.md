@@ -1,5 +1,3 @@
-Sure! Here is the updated README with the package name changed to `mb-express`.
-
 # `mb-express` Package
 
 `mb-express` is a utility package that streamlines the process of setting up an Express server with MongoDB and Mongoose, along with essential features like routing, validation, and logging. It simplifies common tasks, allowing you to focus more on building your application and less on boilerplate code. This package includes support for MongoDB connection, schema validation, logging via `morgan`, CORS handling, and basic routing.
