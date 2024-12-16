@@ -1,6 +1,6 @@
-# `mb-express` Package
+# `mbfi` Package
 
-`mb-express` is a utility package that streamlines the process of setting up an Express server with MongoDB and Mongoose, along with essential features like routing, validation, and logging. It simplifies common tasks, allowing you to focus more on building your application and less on boilerplate code. This package includes support for MongoDB connection, schema validation, logging via `morgan`, CORS handling, and basic routing.
+`mbfi` is a utility package that streamlines the process of setting up an Express server with MongoDB and Mongoose, along with essential features like routing, validation, and logging. It simplifies common tasks, allowing you to focus more on building your application and less on boilerplate code. This package includes support for MongoDB connection, schema validation, logging via `morgan`, CORS handling, and basic routing.
 
 ## Features
 
@@ -17,19 +17,19 @@
 Install the package via npm:
 
 ```bash
-npm install mb-express
+npm install mbfi
 ```
 
 ## How to Use
 
 ### Basic Setup
 
-To get started with `mb-express`, you can follow these simple steps to set up a server and connect it to MongoDB.
+To get started with `mbfi`, you can follow these simple steps to set up a server and connect it to MongoDB.
 
 1. **Create a Server (`server.js`)**
 
 ```javascript
-const { run, connectDB, validation, express, router1 } = require('mb-express');
+const { run, connectDB, validation, express, router1 } = require('mbfi');
 
 const app = run(5000); // Start the server on port 5000
 
@@ -60,7 +60,7 @@ You can define multiple routers using the built-in `express.Router()` functional
 1. **Router Setup (`main.js`)**
 
 ```javascript
-const { router1 } = require('mb-express');
+const { router1 } = require('mbfi');
 
 router1.get("/", (req, res) => {
   res.send("Welcome to Router 1");
@@ -81,7 +81,7 @@ app.get("/custom", (req, res) => {
 
 ### MongoDB and Mongoose Integration
 
-The `mb-express` package integrates MongoDB using Mongoose seamlessly. 
+The `mbfi` package integrates MongoDB using Mongoose seamlessly. 
 
 - **Connecting to MongoDB**: Simply pass your MongoDB connection string to `connectDB` to establish a connection.
 
@@ -101,7 +101,7 @@ const User = validation("User", userSchema);
 
 ### Logging with Morgan
 
-`mb-express` includes `morgan` for logging HTTP requests. This middleware is automatically added to your app when you use the `run` function.
+`mbfi` includes `morgan` for logging HTTP requests. This middleware is automatically added to your app when you use the `run` function.
 
 ```javascript
 app.use(morgan("dev")); // Logs all incoming requests
@@ -109,7 +109,7 @@ app.use(morgan("dev")); // Logs all incoming requests
 
 ### CORS Support
 
-To handle CORS, `mb-express` includes CORS middleware by default, which allows you to easily share resources across different domains.
+To handle CORS, `mbfi` includes CORS middleware by default, which allows you to easily share resources across different domains.
 
 ```javascript
 app.use(cors()); // Enable CORS
@@ -144,13 +144,13 @@ This package is designed to handle all the basic setup for Express and MongoDB, 
 mkdir my-project
 cd my-project
 npm init -y
-npm install mb-express
+npm install mbfi
 ```
 
 2. **Create `server.js`**
 
 ```javascript
-const { run, connectDB, validation, express, router1 } = require('mb-express');
+const { run, connectDB, validation, express, router1 } = require('mbfi');
 
 const app = run(5000); // Start the server on port 5000
 
@@ -173,7 +173,7 @@ app.get("/", (req, res) => {
 3. **Create `main.js`**
 
 ```javascript
-const { router1 } = require('mb-express');
+const { router1 } = require('mbfi');
 
 router1.get("/", (req, res) => {
   res.send("Welcome to Router 1");
@@ -194,4 +194,4 @@ Your server will be running at `http://localhost:5000`, with all the configurati
 
 ## Conclusion
 
-The `mb-express` package significantly reduces the time needed to set up and configure MongoDB, Mongoose, and Express. With built-in features like validation, logging, and CORS support, it's an ideal starting point for developing applications quickly and efficiently.#
+The `mbfi` package significantly reduces the time needed to set up and configure MongoDB, Mongoose, and Express. With built-in features like validation, logging, and CORS support, it's an ideal starting point for developing applications quickly and efficiently.#
