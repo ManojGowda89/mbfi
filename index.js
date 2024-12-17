@@ -1,10 +1,8 @@
-const { run } = require("./server");
-const { connectDB } = require("./database/nosql/db");
-const { validation } = require("./database/nosql/schema");
+const { run } = require("./express/server");
 const {nosql} = require("./database/nosql/index")
 const {sql} =require("./database/sql/index")
-const { router, router1, router2, router3, router4 } = require("./routers/router");
-const state =require("./state")
+const { router } = require("./express/routers/router");
+const state =require("./state/state")
 require("dotenv").config()
 
 
@@ -13,9 +11,5 @@ module.exports = {
   nosql ,
   sql,
    router,
-  router1,
-  router2,
-  router3,
-  router4,
   state
 };
