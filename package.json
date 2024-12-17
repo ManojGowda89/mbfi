@@ -11,8 +11,10 @@
   "description": "`express-runner` is a utility package that streamlines the process of setting up an Express server with MongoDB and Mongoose, along with essential features like routing, validation, and logging. It simplifies common tasks, allowing you to focus more on building your application and less on boilerplate code. This package includes support for MongoDB connection, schema validation, logging via `morgan`, CORS handling, and basic routing.",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "mongoose": "^8.9.0",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.9"
   }
 }
