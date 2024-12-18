@@ -9,7 +9,7 @@ const run = (port,allowedOrigins) => {
   // Middleware setup
   app.use(morgan("dev"));
   app.use(
-    cors({
+    cors(allowedOrigins?{
       origin: function (origin, callback) {
         // Allow requests with no origin (e.g., server-to-server or local tools)
         if (!origin) {
@@ -26,7 +26,7 @@ const run = (port,allowedOrigins) => {
       },
       methods: ['GET', 'POST', 'PUT', 'DELETE'],
       credentials: true,
-    })
+    }:" ")
   );
   app.use(express.json());
 
